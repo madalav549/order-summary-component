@@ -1,0 +1,143 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  border: none;
+  padding: 0;
+  font-family: 'Red Hat Display';
+}
+:root{
+  --main-background: hsl(225, 100%, 94%);
+  --container-background: white;
+  --header-text-color: hsl(223, 47%, 23%);
+  --text-color: hsl(224, 23%, 55%);
+  --button-background: hsl(245, 75%, 52%);
+  --card-background:  hsl(225, 100%, 98%);
+  --button-hover-color: hsl(245, 85%, 69%);
+}
+body{
+  background-color: var(--main-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("./images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+}
+p{
+  font-size: 16px;
+}
+.main-container{
+  width: 90%;
+  border-radius: 15px;
+  background-color: var(--container-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  align-items: center;
+}
+.hero-section{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.hero-section img{
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.order-summary-section{
+  width: 77%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.order-summary-section h1{
+  color: var(--header-text-color);
+  font-weight: 900;
+  margin-bottom: 17px;
+}
+.order-summary-section p{
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+.plan-section{
+  background-color: var(--card-background);
+  width: 85%;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  justify-content: space-between;
+}
+.plan-section img{
+  height: 2.8rem;
+  /*margin-left: 1rem;*/
+}
+.pricing-container{
+  font-size: 0.8rem;
+  /*margin-left: 1rem;*/
+}
+.pricing-container strong{
+  color: var(--header-text-color);
+  font-weight: 900;
+}
+.pricing-container p{
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+.plan-section a{
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: color 0.3s ease-in-out;
+}
+.plan-section a:hover{
+  cursor: pointer;
+  color: var(--button-hover-color); /*This color was not in the style guide, I had to use a color code picker on the design image to get it*/
+}
+.order-section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.order-section button{
+  font-weight: 900;
+  color: var(--container-background);
+  background-color: var(--button-background);
+  padding: 0.8rem;
+  width: 85%;
+  margin-top: 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 3px 7px 20px hsla(245, 75%, 52%, 0.5);
+}/*Need help with the shadow here*/
+.order-section button:hover{
+  cursor: pointer;
+  background-color: var(--button-hover-color);
+  box-shadow: 3px 7px 20px hsla(245, 85%, 69%, 0.5);
+}
+.order-section p{
+  color: var(--text-color);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: 900;
+  font-size: 0.85rem;
+  transition: color 0.3s ease-in-out;
+}
+.order-section p:hover{
+  color: var(--header-text-color);
+  cursor: pointer;
+}
+footer{
+  margin-top: 20px;
+}
+@media all and (min-width: 1024px){
+  body{
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-size: auto 49%;
+  }
+  .main-container{
+    width: 37%;
+  }
+}/*Gonna need help with the font-size here, to me they look good, but if you see any room for improvement don't hesitate to correct me*/
